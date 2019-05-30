@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row" style="text-align:center">
+    <div class="col-12">
+      <p class="appName" style="">Identities Chain</p><br>
+      <div class="logo">
+        <img class="img-responsive" src="assets/images/IdentitiesLogo.PNG" alt="identities" width="125pt" height="125pt">
+      </div>
+    </div>
+  </div>
+  <div class="accessForm">
+    <div class="row">
+      <div class="col-12">
+          <div class="fieldName">
+            <p>Usuario</p>
+          </div><br>
+          <div class="fieldLine">
+            <input #user type="text" class="field" placeholder="Usuario">
+          </div><br>
+          <div class="fieldName ps">
+            <p>Contraseña</p>
+          </div><br>
+          <div class="fieldLine">
+            <input #password type="password" class="field" placeholder="Contraseña">
+          </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="loginButton">
+          <a (click)="logIn(user.value, password.value, content)">INICIAR SESIÓN</a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <span class="forgetOption">¿Has olvidado tu contraseña?</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="registration">
+      <a routerLink="../registry" class="registration">Registrarse</a>
+    </div>
+  </div>
+
+  <ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-body">
+      <p>Datos Incorrectos</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Cerrar</button>
+    </div>
+  </ng-template>
+
+</div>

@@ -1,0 +1,64 @@
+<div class="header">
+  <div class="row">
+    <div class="col-12 registryLabel">
+      <span>Registrarse</span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="form">
+    <div class="row">
+      <div class="col-12">
+        <div class="nameField">
+          <span>Usuario (Clave Pública)</span>
+        </div><br>
+        <div class="textField">
+          <input #user type="text" class="textField" [(ngModel)]="userName">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="nameField">
+          <span>Contraseña</span>
+        </div><br>
+        <div class="textField">
+          <input #pass type="password" class="textField" [(ngModel)]="password">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="nameField">
+          <span>Confirmar Contraseña</span>
+        </div><br>
+        <div class="textField">
+          <input #pass2 type="password" class="textField" [(ngModel)]="password2" (change)="onChanges()">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <p class="alerta">
+          <ngb-alert class="alert alert-danger alert-dismissible" role="alert" *ngIf="!same" (close)="same = true" [dismissible]="false">
+            <strong>Atención!</strong> Las contraseñas deben ser las mismas
+          </ngb-alert>
+        </p>
+      </div>
+    </div>
+    <div class="createButton">
+      <a (click)="addUser(user.value, pass.value, pass2.value, content)" >Crear Cuenta</a>
+    </div>
+  </div>
+
+  <ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-body">
+      <p>Usuario añadido :)</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Cerrar</button>
+    </div>
+  </ng-template>
+
+</div>

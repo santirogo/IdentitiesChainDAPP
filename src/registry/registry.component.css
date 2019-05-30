@@ -1,0 +1,73 @@
+div.header{
+  background-color: #0E294B;
+  width: 100%;
+  height: 90px;
+  margin-bottom: 80px;
+}
+
+div.registryLabel{
+  color: white;
+  font-size: 45px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+div.registryLabel span{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.form{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.nameField{
+  margin-top: 20px;
+}
+
+div.nameField span{
+  color: white;
+  font-size: 15pt;
+}
+
+div.textField{
+  border-bottom: 1px solid #C0CCDA;
+  margin-top: -20px;
+}
+
+div.textField input{
+  background-color: #0E294B;
+  width: 100%;
+  border: 0;
+}
+
+p.alerta{
+  margin-top: 15px;
+  margin-bottom: -75px;
+}
+
+div.createButton{
+  background-color: #094293;
+  text-align: center;
+  height: 48px;
+  margin-top: 120px;
+  padding-top: 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+div.createButton a{
+  text-decoration: none;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .form{
+    width: 60%;
+  }
+}
+
+@media (min-width: 768px) {
+
+}

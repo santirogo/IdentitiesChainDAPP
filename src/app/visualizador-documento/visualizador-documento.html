@@ -1,0 +1,39 @@
+<!--component html goes here -->
+<mat-toolbar class="dashboard" style="align-items: initial;">
+    <span>
+        <img src="../../assets/menu-icon.png" class="menu-icon">
+    </span>
+    <span class="fill-remaining-space"></span>
+    <span class="text-toolbar">Cédula</span>
+    <span class="fill-remaining-space"></span>
+    <span>
+        <img src="../../assets/qr-icon.png" class="menu-icon">
+    </span>
+</mat-toolbar>
+
+<img src="../../assets/profile-img.png" class="profile-img">
+
+<div class="textField">
+    <input #dir type="text" class="textField">
+</div>
+<div class="createButton">
+    <a (click)="getDoc(dir.value)" >Consultar</a>
+</div>
+
+<h2 class="id-text">{{doc.key}}</h2>
+<h1 class="id-text" style=" text-transform: capitalize;">{{doc.nombre}}</h1>
+<hr>
+
+<p style="color: white; margin-top: 0px; margin-bottom: 1.31%">Fecha de nacimiento</p>
+<p style="color: white; font-size: 23px; margin-top: 0px; text-transform: capitalize;">{{doc.fecha}}</p>
+ 
+<!--<p style="color: white; margin-top: 0px; margin-bottom: 1.31%">G.S. RH</p>
+<p style="color: white; font-size: 23px; margin-top: 0px; text-transform: capitalize;">{{doc.gs}} {{doc.rh}}</p>-->
+ 
+<p style="color: white; margin-top: 0px; margin-bottom: 1.31%">Ciudad de nacimiento</p>
+<p style="color: white; font-size: 23px; margin-top: 0px; text-transform: capitalize;">{{doc.ciudad}}, {{doc.dep}}</p>
+ 
+<p style="color: white; margin-top: 0px; margin-bottom: 1.31%">Sexo</p>
+<p style="color: white; font-size: 23px; margin-top: 0px; text-transform: capitalize;">{{doc.sexo}}</p>
+
+ 

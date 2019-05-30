@@ -1,0 +1,56 @@
+<div class="header">
+  <div class="row">
+    <div class="col-2 menuIcon">
+      <a (click)="redireccion()"><img src="../../assets/menu-icon.png" alt="menu" width="48px" height="48px"></a>
+    </div>
+    <div class="col-8 menuLabel">
+      <span>Documento</span>
+    </div>
+    <div class="col-2">
+    </div>
+  </div>
+</div>
+
+
+<div>
+  <mat-card class="example-card">
+    <div class="cardTitle">
+      <div class="row">
+        <div class="col-2">
+        </div>
+        <div class="col-8">
+          <mat-card-title>{{doc.nombre}}</mat-card-title>
+        </div>
+        <div (click)="openModal(content)" class="col-2 qr">
+          <img src="../assets/images/qr.png" width="24px" height="24px" alt="">
+        </div>
+      </div>
+    </div>
+    <img mat-card-image src="{{doc.url}}" alt="">
+    <mat-card-content>
+      <div class="row">
+        <div class="col-8">
+          <h3 class="content-title">Hash</h3>
+          <p>
+            {{doc.hash}}
+          </p>
+        </div>
+        <div class="col-4">
+          <span class="icon" routerLink = "../../compartirdocumento/{{doc.hash}}">
+            <mat-icon>share</mat-icon>
+          </span>
+        </div>
+      </div>
+
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-body">
+    <ngx-qrcode [qrc-element-type]="elementType" [qrc-value] = "doc.url"></ngx-qrcode>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Cerrar</button>
+  </div>
+</ng-template>

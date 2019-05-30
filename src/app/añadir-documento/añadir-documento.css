@@ -1,0 +1,36 @@
+.dashboard {
+    width: 100%;
+    background-color: transparent;
+    padding: 0px;
+}
+
+.fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-icon{
+    width: 35px;
+    color: white;
+}
+
+.text-toolbar{
+    font-size: 30px;
+    color: white;
+    margin-bottom: 4%;
+}
+
+.sensor-form{
+    margin-left: 10px;
+}
+
+mat-form-field {
+    color: white;
+    font-family: 'Lato', sans-serif !important;
+    font-size: 18px;
+    display: block;
+    width: 95%;
+}

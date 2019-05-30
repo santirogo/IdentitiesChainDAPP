@@ -1,0 +1,48 @@
+<div class="header">
+  <div class="row">
+    <div class="col-2 menuIcon">
+      <a (click)="redireccionar()"><img src="../../assets/menu-icon.png" alt="menu" width="48px" height="48px"></a>
+    </div>
+    <div class="col-8 menuLabel">
+      <span>Nuevo Documento</span>
+    </div>
+    <div class="col-2">
+    </div>
+  </div>
+</div>
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-lg-3 col-md-3">
+    </div>
+    <div class="col-lg-6 col-12 col-md-6">
+
+      <div class="formCedula">
+        <p>Nombre</p>
+        <input class="input" #nombre type="text" style="margin-bottom:5%;"/><br>
+        <p>URL</p>
+        <input class="input" #url type="text" style="margin-bottom:5%;"/><br>
+        <p>Hash</p>
+        <input class="input" #hash type="text" style="margin-bottom:5%;"/><br>
+
+
+        <button type="button" class="btn btn-default newCedBoton" (click)="createDoc(nombre.value,url.value,hash.value)">Crear</button>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="col-lg-3 col-md-3 thirdColumn">
+      <div class="okCircle">
+        <div class="checkmark">
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

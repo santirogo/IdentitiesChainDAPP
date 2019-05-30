@@ -1,0 +1,42 @@
+p.newDocTitle{
+  text-align: center;
+  font-size: 25pt;
+  margin-top: 3%;
+}
+div.formCedula{
+  margin-top: 10%;
+}
+input{
+  background-color: #0E294B;
+  outline: 0;
+  border-color: #969FAA;
+
+  border-width: 0 0 2px;
+  color: white;
+  width: 100%;
+}
+input:focus{
+  border-color: white;
+}
+div.formCedula p{
+  font-size: 13pt;
+}
+mat-form-field{
+  width: 100%;
+}
+.toggle{
+  background: white;
+  border-radius: 3px;
+}
+label{
+  white-space: nowrap;
+  width:30px;
+}
+button.newCedBoton{
+  color: white;
+  width: 100%;
+  background-color: #094293;
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+}

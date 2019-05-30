@@ -1,0 +1,99 @@
+<div class="header">
+  <div class="row">
+    <div class="col-4">
+    </div>
+    <div class="col-4 menuLabel">
+      <span>Menú</span>
+    </div>
+    <div class="col-4 menuIcon">
+      <img src="assets/images/menuIcon.png" alt="menu" width="48px" height="48px">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="menuArea">
+    <div class="col-12">
+      <div class="menuDropdown" (click)="getDoc()" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="parcelCollapse">
+
+        <div class="areaName">
+          <span style="cursor:pointer">Mis Documentos</span>
+        </div>
+        <div class="arrowIcon" *ngIf="isCollapsed; else notCollapsed">
+          <img src="assets/images/arrowDownIcon.png" alt="place" width="40px" height="40px">
+        </div>
+        <ng-template #notCollapsed>
+          <img src="assets/images/arrowUpIcon.png" alt="add" width="40px" height="40px">
+        </ng-template>
+      </div>
+      <div id="parcelCollapse" [ngbCollapse]="isCollapsed" class="collapseList">
+        <ul *ngFor="let doc of documentos" >
+          <li>
+            <div class="icon">
+              <img src="assets/images/profileIcon.png" alt="birth" width="35px" height="35px">
+            </div>
+            <a routerLink = "../../mostrardocumento/{{doc.hash}}">{{doc.nombre}}</a>
+          </li>
+        </ul>
+        <div class="addIcon">
+          <a routerLink = "../aniadirdocumento"><img src="assets/images/addIcon.png" alt="add" width="35px" height="35px"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="line">
+  <hr>
+</div>
+
+<div class="row">
+  <div class="menuArea">
+    <div class="col-12">
+      <div class="icon">
+        <img src="assets/images/people.png" alt="water" width="35px" height="35px">
+      </div>
+      <div routerLink = "../../permisos/" class="areaName">
+        <span>Ver permisos</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="menuArea">
+    <div class="col-12">
+      <div class="icon">
+        <img src="assets/images/addDocIcon.png" alt="water" width="35px" height="35px">
+      </div>
+      <div routerLink = "../../generardocumento/" class="areaName">
+        <span>Generar Documento</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="menuArea">
+    <div class="col-12">
+      <div class="icon">
+        <img src="assets/images/settingsIcon.png" alt="water" width="35px" height="35px">
+      </div>
+      <div class="areaName">
+        <span>Configuración</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row lastRow">
+  <div class="menuArea">
+    <div class="col-12">
+      <div class="icon">
+        <img src="assets/images/questionIcon.png" alt="water" width="35px" height="35px">
+      </div>
+      <div class="areaName">
+        <span>Configuración</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+div.header{
+  width: 100%;
+  height: 90px;
+}
+
+div.menuLabel{
+  color: white;
+  margin-top: 15px;
+  text-align: center;
+}
+
+div.menuLabel span{
+  font-size: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.menuIcon{
+  text-align: left;
+  color: white;
+  margin-left: 10px;
+  margin-top: 20px;
+  cursor:pointer;
+}
+
+div.formCompartir{
+  margin-top: 50%;
+  margin-bottom: 50%;
+}
+input{
+  background-color: #0E294B;
+  outline: 0;
+  border-color: #969FAA;
+
+  border-width: 0 0 2px;
+  color: white;
+  width: 100%;
+}
+input:focus{
+  border-color: white;
+}
+div.formCompartir p{
+  font-size: 13pt;
+}
+mat-form-field{
+  width: 100%;
+}
+.toggle{
+  background: white;
+  border-radius: 3px;
+}
+label{
+  white-space: nowrap;
+  width:30px;
+}
+button.newCedBoton{
+  color: white;
+  width: 100%;
+  background-color: #094293;
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+}

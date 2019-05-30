@@ -1,0 +1,130 @@
+div.header{
+  background-color: #0E294B;
+  width: 100%;
+  height: 90px;
+}
+
+div.menuLabel{
+  color: white;
+  font-size: 45px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+div.menuLabel span{
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.menuIcon{
+  text-align: right;
+  color: white;
+  margin-left: -20px;
+  margin-top: 20px;
+}
+
+div.icon{
+  display: inline;
+  width: 40px;
+  height: 40px;
+  float: left;
+  margin-right: 20px;
+}
+
+div.menuArea{
+  display: inline;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+div.menuDropdown{
+  cursor: pointer;
+}
+
+div.areaName{
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+div.areaName span{
+  display: inline;
+  color: white;
+}
+
+div.arrowIcon{
+  display: inline;
+  width: 40px;
+  height: 40px;
+  float: left;
+}
+
+div.collapseList{
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+div.collapseList li{
+  list-style-type: none;
+  margin-top: 10px;
+}
+
+div.collapseList a{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+div.addIcon{
+  text-align: center;
+}
+
+div.line{
+
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+}
+
+div.line hr{
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #969FAA;
+  margin: 1em 0;
+  padding: 0;
+
+}
+
+div.lastRow{
+  margin-bottom: 70px;
+}
+
+@media (min-width: 768px) {
+  .menuArea{
+    margin-left: 20%;
+    width: 60%;
+  }
+  .line{
+    width: 60%;
+  }
+  .areaName span{
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menuArea{
+    margin-left: 20px;
+    width: 90%;
+  }
+  .line{
+    width: 85%;
+  }
+  .areaName span{
+    font-size: 28px;
+  }
+}

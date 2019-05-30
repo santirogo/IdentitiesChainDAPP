@@ -1,0 +1,31 @@
+<div class="header">
+  <div class="row">
+    <div class="col-2 menuIcon">
+      <a (click)="redireccion()"><img src="../../assets/menu-icon.png" alt="menu" width="48px" height="48px"></a>
+    </div>
+    <div class="col-8 menuLabel">
+      <span>Documento</span>
+    </div>
+    <div class="col-2">
+    </div>
+  </div>
+</div>
+
+<div *ngFor="let permiso of permisos" >
+
+  <div class="card">
+    <div class="card-header">
+      <h4>{{permiso.documentos[0].nombre}}</h4>
+      <p>Compartido por: </p>
+      <h4>{{permiso.duenio}}</h4>
+
+    </div>
+    <div class="card-body">
+
+      <img src="{{permiso.documentos[0].url}}" alt="ok">
+      <hr>
+      <h3 class="card-title">Hash</h3>
+      <h5 class="card-title">{{permiso.documentos[0].hash}}</h5>
+    </div>
+  </div>
+</div>

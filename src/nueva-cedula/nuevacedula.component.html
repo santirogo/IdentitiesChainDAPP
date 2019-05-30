@@ -1,0 +1,97 @@
+<div class="container">
+<p class="newDocTitle">Nueva Cédula</p>
+  <div class="row">
+
+    <div class="col-lg-3 col-md-3">
+    </div>
+    <div class="col-lg-6 col-12 col-md-6">
+
+      <div class="formCedula">
+        <p>Nombre</p>
+        <input class="input" #nombre type="text" style="margin-bottom:5%;"/><br>
+        <p>Fecha de Nacimiento</p>
+          <mat-form-field>
+            <input #fecha class="date input" matInput [matDatepicker]="simpleDate"  readonly>
+            <mat-datepicker-toggle class="toggle" matSuffix [for]="simpleDate" >
+            </mat-datepicker-toggle>
+            <mat-datepicker #simpleDate></mat-datepicker>
+          </mat-form-field>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-6">
+            <p>G.S</p>
+            <mat-form-field>
+              <select #gs matNativeControl required>
+                  <option value="O">O</option>
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="AB">AB</option>
+
+              </select>
+            </mat-form-field>
+          </div>
+          <div class="col-lg-6 col-md-6 col-6">
+            <p>RH</p>
+            <mat-form-field>
+              <select #rh matNativeControl required>
+                  <option value="+">+</option>
+                  <option value="-">-</option>
+              </select>
+            </mat-form-field>
+          </div>
+        </div>
+        <p>Departamento</p>
+        <mat-form-field>
+          <select #depto matNativeControl required>
+              <option value="Antioquia">Antioquia</option>
+              <option value="Arauca">Arauca</option>
+              <option value="Atlántico">Atlántico</option>
+              <option value="Bolivar">Bolivar</option>
+              <option value="Boyacá">Boyacá</option>
+              <option value="Cundinamarca">Cundinamarca</option>
+          </select>
+        </mat-form-field>
+        <p>Ciudad</p>
+
+        <mat-form-field>
+          <select #ciudad matNativeControl required>
+              <option value="Bogotá">Bogotá</option>
+              <option value="Chía">Chía</option>
+              <option value="Facatativáca">Facatativá</option>
+              <option value="Cajicá">Cajicá</option>
+          </select>
+        </mat-form-field>
+
+        <p>Sexo</p>
+
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-6">
+            <div class="radio">
+              <label><input class="input" [(ngModel)]="genre" value="masculino" type="radio" name="optradio">Masculino</label>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-6">
+            <div class="radio">
+              <label><input class="input" [(ngModel)]="genre" value="femenino" type="radio" name="optradio">Femenino</label>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-default newCedBoton" (click)="createCedula(nombre.value,fecha.value,depto.value,ciudad.value,genre.value)">Crear</button>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="col-lg-3 col-md-3 thirdColumn">
+      <div class="okCircle">
+        <div class="checkmark">
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
